@@ -1,2 +1,233 @@
-# Hulet-Fish
-A modern tourism platform built to promote local Ethiopian travel experiences. With secure authentication via Fayda, real-time bookings, Stripe payments, role-based access, and review systems, Hulet Fish Tourism connects tourists with trusted hosts and guides while supporting Ethiopia’s digital transformation.
+# Project Title: Hulet Fish Tourism Platform
+
+A modern, scalable, and community-driven platform for booking and managing authentic Ethiopian  tourism experiences. This monorepo includes both the frontend (Next.js) and backend (Node.js/Express) applications, and is designed to deliver a seamless experience for tourists, hosts, guides, and administrators.
+
+   Live Preview:  
+   You can view the deployed frontend at [https://v0-huletfishtourism.vercel.app/](https://v0-huletfishtourism.vercel.app/)
+
+## Contributors:
+- Yared Atrsaw Andargei
+- Befekadu Berhanu Burju
+
+## Project Synopsis
+
+### Problem Statement:
+Ethiopia’s tourism sector lacks a centralized, tech-enabled solution that highlights authentic local experiences while offering a secure booking system for both tourists and providers.
+
+### Planned Solution:
+We are building a full-stack tourism platform where local hosts can create, manage, and promote their own tour packages. Tourists can securely book and review these experiences. Fayda ID will be used to ensure all users are real, verified individuals.
+
+### Expected Outcome:
+A functioning MVP that includes:
+- Fayda login system
+- Tour management
+- Booking and payment processing
+- Admin dashboard
+- Secure, scalable infrastructure
+
+### Fayda's Role:
+Fayda will be the core identity verification system. Users will register and log in using their Fayda ID via VeriFayda OIDC. This will add trust, prevent fraud, and ensure platform integrity.
+
+### Tech Stack:
+- Frontend: Next.js, Tailwind CSS, Vercel
+- Backend: Node.js, Express.js, MongoDB, JWT, VeriFayda OIDC
+- Payments: Stripe
+- Media: Cloudinary
+- Dev Tools: GitHub, Postman, dotenv, Helmet, CORS
+# Hulet Fish Tourism Platform
+
+## Table of Contents
+
+- [Features](#features)
+- [Monorepo Structure](#monorepo-structure)
+- [Getting Started](#getting-started)
+  - [Frontend Setup](#frontend-setup)
+  - [Backend Setup](#backend-setup)
+- [Project Structure](#project-structure)
+- [API Overview](#api-overview)
+- [User Roles](#user-roles)
+- [Security](#security)
+- [Development & Contribution](#development--contribution)
+- [Deployment](#deployment)
+- [Support](#support)
+- [License](#license)
+
+---
+
+## Features
+
+- Full-stack monorepo with shared codebase
+- Next.js frontend with modern UI/UX
+- Node.js/Express backend with RESTful API
+- MongoDB with Mongoose ODM
+- JWT-based authentication and robust role management
+- Tour creation, management, and booking
+- Stripe payment integration
+- Cloudinary image uploads
+- Reviews and rating system
+- Automated email notifications
+- Security best practices (Helmet, CORS, rate limiting)
+- Comprehensive API documentation
+
+---
+
+## Monorepo Structure
+
+app/         # Next.js frontend application
+backend/     # Node.js/Express backend API
+components/  # Shared React components
+hooks/       # Shared React hooks
+lib/         # Shared libraries and utilities
+public/      # Static assets
+styles/      # Global styles
+
+---
+
+## Getting Started
+
+### Frontend Setup
+
+1. Navigate to the project root
+2. Install dependencies
+      pnpm install
+   
+3. Run the development server
+      pnpm dev
+   
+   The frontend will start at http://localhost:3000.
+
+   Live Preview:  
+   You can view the deployed frontend at [https://v0-huletfishtourism.vercel.app/](https://v0-huletfishtourism.vercel.app/)
+
+### Backend Setup
+
+1. Navigate to the backend directory
+      cd backend
+   
+2. Install dependencies
+      npm install
+   
+3. Copy and configure environment variables
+      cp .env.example .env
+   # Edit .env with your MongoDB URI, JWT secret, etc.
+   
+4. Seed the database with sample data (optional)
+      npm run seed
+   
+5. Run the development server
+      npm run dev
+   
+   The API will be available at http://localhost:5000.
+
+---
+
+## Project Structure
+
+### Backend
+
+backend/
+├── models/           # Database models (User, Tour, Booking, Review)
+├── routes/           # API route handlers
+├── middleware/       # Custom middleware (auth, error handling)
+├── scripts/          # Database seeding and utilities
+├── uploads/          # File upload directory
+├── .env.example      # Environment variables template
+├── server.js         # Main application entry point
+└── package.json      # Dependencies and scripts
+
+---
+
+## API Overview
+
+- Authentication
+  - POST /api/auth/register — Register a new user
+  - POST /api/auth/login — Login
+  - POST /api/auth/google — Google OAuth login
+  - GET /api/auth/me — Current user profile
+  - POST /api/auth/logout — Logout
+
+- Tours
+  - GET /api/tours — List all tours (with filtering)
+  - GET /api/tours/featured — Featured tours
+  - GET /api/tours/:id — Single tour
+  - POST /api/tours — Create new tour (Host/Admin)
+  - PUT /api/tours/:id — Update tour (Host/Admin)
+  - DELETE /api/tours/:id — Delete tour (Host/Admin)
+
+- Users
+  - GET /api/users/profile — Get profile
+  - PUT /api/users/profile — Update profile
+  - GET /api/users/hosts — List hosts
+
+- Bookings
+  - POST /api/bookings — Create booking
+  - GET /api/bookings — User bookings
+  - GET /api/bookings/:id — Booking details
+  - PUT /api/bookings/:id/status — Update status
+
+- Reviews
+  - POST /api/reviews — Create review
+  - GET /api/reviews/tour/:tourId — Tour reviews
+  - PUT /api/reviews/:id — Update review
+  - DELETE /api/reviews/:id — Delete review
+See the backend/README.md for full API documentation.
+
+---
+
+## User Roles
+
+- Tourist: Browse/book tours, leave reviews
+- Host: Create/manage tours, handle bookings
+- Guide: Assist with tours and bookings
+- Admin: Full system access and management
+
+---
+
+## Security
+
+- Helmet: HTTP security headers
+- CORS: Configurable cross-origin requests
+- Rate Limiting: Protect API from abuse
+- Input Validation: Sanitize and validate all input
+- Password Hashing: bcrypt encryption
+- JWT Authentication: Secure token-based auth
+
+---
+
+## Development & Contribution
+
+1. Fork the repository
+2. Create a feature branch
+3. Implement your changes (with tests if applicable)
+4. Submit a pull request
+
+We welcome contributions from the community! Please read our [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+
+---
+
+## Deployment
+
+### Environment Variables
+
+Copy .env.example files and configure for your environment (development or production).
+
+### Supported Platforms
+
+- Heroku: Recommended for quick deployments with MongoDB Atlas
+- DigitalOcean: App Platform or Droplets
+- AWS: EC2 or Elastic Beanstalk
+- Vercel: For frontend/serverless functions
+
+---
+
+## Support
+
+- Email: [t.zanafola@alustudent.com](mailto:t.zanafola@alustudent.com)
+- API Documentation: [API Docs](https://api.huletfish.com/docs)
+- Issues: [GitHub Issues](https://github.com/hulet-fish-tourism/issues)
+
+---
+
+## License
+
+This project is licensed under the MIT License.
