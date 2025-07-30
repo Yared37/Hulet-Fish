@@ -92,8 +92,6 @@ styles/      # Global styles
    
    The frontend will start at http://localhost:3000.
 
-   Live Preview:  
-   You can view the deployed frontend at [https://v0-huletfishtourism.vercel.app/](https://v0-huletfishtourism.vercel.app/)
 
 ### Backend Setup
 
