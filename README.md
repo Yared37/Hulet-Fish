@@ -25,7 +25,9 @@ A functioning MVP that includes:
 - Secure, scalable infrastructure
 
 ### Fayda's Role:
-Fayda will be the core identity verification system. Users will register and log in using their Fayda ID via VeriFayda OIDC. This will add trust, prevent fraud, and ensure platform integrity.
+A few years ago, safely connecting a foreign tourist to a local Ethiopian home was nearly impossible. With Fayda Digital ID, we now verify all users—making secure, trusted cultural exchange possible.
+
+This project may look like tourism, but at its core, it's a showcase of what Fayda makes possible.
 
 ### Tech Stack:
 - Frontend: Next.js, Tailwind CSS, Vercel
