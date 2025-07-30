@@ -1,6 +1,6 @@
 # Project Title: Hulet Fish Tourism Platform
 
-A modern, scalable, and community-driven platform for booking and managing authentic Ethiopian  tourism experiences. This monorepo includes both the frontend (Next.js) and backend (Node.js/Express) applications, and is designed to deliver a seamless experience for tourists, hosts, guides, and administrators.
+A modern, secure, and Fayda-powered platform for discovering, booking, and managing authentic Ethiopian tourism experiences. This monorepo includes both the frontend (Next.js) and backend (Node.js/Express) applications, built to empower local hosts and safely connect them with verified tourists. More than just tourism—this is a real-world application of Fayda Digital ID, enabling trusted cultural exchange across Ethiopia.
 ## Contributors:
 - Yared Atrsaw Andargei
 - Befekadu Berhanu Burju
