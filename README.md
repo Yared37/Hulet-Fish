@@ -8,10 +8,13 @@ A modern, scalable, and community-driven platform for booking and managing authe
 ## Project Synopsis
 
 ### Problem Statement:
-Ethiopia’s tourism sector lacks a centralized, tech-enabled solution that highlights authentic local experiences while offering a secure booking system for both tourists and providers.
+Ethiopia, with its rich cultural diversity and over 80 ethnic groups, offers unique local experiences that remain largely untapped by tourists. The tourism sector still relies on a few traditional sites and lacks a centralized, secure, and tech-enabled platform. As a result, authentic cultural experiences are missed, and local hosts lack visibility.
+
 
 ### Planned Solution:
-We are building a full-stack tourism platform where local hosts can create, manage, and promote their own tour packages. Tourists can securely book and review these experiences. Fayda ID will be used to ensure all users are real, verified individuals.
+We’re building a full-stack tourism platform that connects tourists with verified local hosts offering authentic Ethiopian experiences. Using Fayda ID, we ensure secure, trusted bookings—bringing the true spirit of Ethiopia directly to every traveler.
+
+
 
 ### Expected Outcome:
 A functioning MVP that includes:
