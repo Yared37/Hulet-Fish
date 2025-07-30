@@ -83,35 +83,41 @@ styles/      # Global styles
 
 ### Frontend Setup
 
-1. Navigate to the project root
-2. Install dependencies
-      pnpm install
-   
-3. Run the development server
-      pnpm dev
-   
-   The frontend will start at http://localhost:3000.
-
+1. **Navigate to the project root**
+2. **Install dependencies**
+   ```bash
+   pnpm install
+   ```
+3. **Run the development server**
+   ```bash
+   pnpm dev
+   ```
+   The frontend will start at `http://localhost:3000`.
 
 ### Backend Setup
 
-1. Navigate to the backend directory
-      cd backend
-   
-2. Install dependencies
-      npm install
-   
-3. Copy and configure environment variables
-      cp .env.example .env
+1. **Navigate to the backend directory**
+   ```bash
+   cd backend
+   ```
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+3. **Copy and configure environment variables**
+   ```bash
+   cp .env.example .env
    # Edit .env with your MongoDB URI, JWT secret, etc.
-   
-4. Seed the database with sample data (optional)
-      npm run seed
-   
-5. Run the development server
-      npm run dev
-   
-   The API will be available at http://localhost:5000.
+   ```
+4. **Seed the database with sample data (optional)**
+   ```bash
+   npm run seed
+   ```
+5. **Run the development server**
+   ```bash
+   npm run dev
+   ```
+   The API will be available at `http://localhost:5000`.
 
 ---
 
