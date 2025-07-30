@@ -1,10 +1,6 @@
 # Project Title: Hulet Fish Tourism Platform
 
 A modern, scalable, and community-driven platform for booking and managing authentic Ethiopian  tourism experiences. This monorepo includes both the frontend (Next.js) and backend (Node.js/Express) applications, and is designed to deliver a seamless experience for tourists, hosts, guides, and administrators.
-
-   Live Preview:  
-   You can view the deployed frontend at [https://v0-huletfishtourism.vercel.app/](https://v0-huletfishtourism.vercel.app/)
-
 ## Contributors:
 - Yared Atrsaw Andargei
 - Befekadu Berhanu Burju
